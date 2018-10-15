@@ -14,8 +14,11 @@ namespace FivthLecture
 
         public StudentAddress(string country, string city, string adress)
         {
+            CheckValid.IsString(ref country);
             this.country = country;
+            CheckValid.IsString(ref city);
             this.city = city;
+            CheckValid.IsAdress(ref adress);
             this.adress = adress;
         }
 

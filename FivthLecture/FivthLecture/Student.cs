@@ -19,8 +19,11 @@ namespace FivthLecture
 
         public Student(string firstName, string lastName, string dateOfAdmission, StudentAddress studentAddress)
         {
+            CheckValid.IsString(ref firstName);
             this.firstName = firstName;
+            CheckValid.IsString(ref lastName);
             this.lastName = lastName;
+            CheckValid.IsDate(ref dateOfAdmission);
             this.dateOfAdmission = dateOfAdmission;
             this.studentAddress = studentAddress;
         }
